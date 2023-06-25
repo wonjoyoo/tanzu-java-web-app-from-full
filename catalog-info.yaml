@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: tanzu-java-web-app
+  name: tanzu-java-web-app-from-full
   description: Tanzu Java Web App
   tags:
     - app-accelerator
@@ -10,11 +10,11 @@ metadata:
     - web
     - tanzu
   annotations:
-    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=tanzu-java-web-app'
+    'backstage.io/kubernetes-label-selector': 'app.kubernetes.io/part-of=tanzu-java-web-app-from-full'
 spec:
   type: service
   providesApis:
-   - tanzu-java-web-app-api
+   - tanzu-java-web-app-from-full-api
   consumesApis:
    - demo-api
   lifecycle: experimental
@@ -962,8 +962,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: tanzu-java-web-app-api
-  description: The tanzu-java-web-app API for Tanzu Application Platform GUI
+  name: tanzu-java-web-app-from-full-api
+  description: The tanzu-java-web-app-from-full API for Tanzu Application Platform GUI
   links:
     - url: https://petstore.swagger.io/
       title: Swagger Petstore
@@ -990,7 +990,7 @@ spec:
         - [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)
         - [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)
       version: '1.0.11'
-      title: tanzu-java-web-app - OpenAPI 3.0
+      title: tanzu-java-web-app-from-full - OpenAPI 3.0
       tags:
         - name: pet
           description: Everything about your Pets
