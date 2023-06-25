@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: tanzu-java-web-app
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"  
+  endpoint:
+    info:
+      enabled: true
+    health:
+      show-details: always
+      
